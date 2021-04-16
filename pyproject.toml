@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "hypermodern-python"
+version = "0.1.0"
+description = "The hypermodern Python project"
+license = "MIT"
+readme = "README.md"
+authors = ["Prudhvipriyanka Bhogavalli <56079804+PriyaSMS@users.noreply.github.com>"]
+homepage = "https://github.com/priya57/hypermodern-python"
+repository = "https://github.com/priya57/hypermodern-python"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+click = "^7.0"
+requests = "^2.25.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.3"
+coverage = {extras = ["toml"], version = "^5.5"}
+pytest-cov = "^2.11.1"
+pytest-mock = "^3.5.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+hypermodern-python = "hypermodern_python.console:main"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["hypermodern_python"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
